@@ -4,7 +4,7 @@
   "description": "A General Solidity Development and Testing Framework/CLI.",
   "main": "index.js",
   "bin": {
-    "sol": "dist/index.js"
+    "sol-dev": "dist/index.js"
   },
   "repository": {
     "type": "git",

@@ -67,7 +67,7 @@ const progress = (title: string, ...names: string[]) => {
                 continue
             }
             let index = Math.floor(Math.random() * names.length)
-            let progress = Math.floor(Math.random() * Math.min(bars[index].getTotal() - progresses[index], 6) / 5 + progresses[index])
+            let progress = Math.floor(Math.random() * Math.max(bars[index].getTotal() - progresses[index], 6) / 5 + progresses[index])
             if (progresses[index] < progress && progress < bars[index].getTotal()) {
                 progresses[index] = progress
                 bars[index].update(progress)

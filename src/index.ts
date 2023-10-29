@@ -4,14 +4,15 @@ import {CLI_ARGS_TYPE, CLI_INFO, CLI_ARG} from "./options";
 import Logger from "./logger";
 import logger from "./logger";
 import arg from "arg";
-import pkg from "../package.json";
+import pkg from "../dist/package.json";
 import inquirer from "inquirer";
 import path from "path";
 import {exec} from "child_process";
 import {promisify} from "util";
 import * as fs from "fs-extra";
+import {fileURLToPath} from 'node:url';
 
-const run = async () => {
+const main = async () => {
     try {
         let args = arg(CLI_ARGS_TYPE, {bare: true} as any)
         if (args[CLI_ARG.VERSION]) {
@@ -40,8 +41,6 @@ const run = async () => {
     process.exit()
 };
 
-run();
-
 const libs = [
     "@chainlink/contracts",
     "@nomicfoundation/hardhat-foundry",
@@ -60,12 +59,13 @@ const libs = [
 
 async function template(projectPath: string) {
     const f1 = async () => {
-        process.chdir(projectPath)
         await promisify(fs.mkdir)(projectPath, {recursive: true});
+        process.chdir(projectPath)
         return await promisify(exec)("npm init -y")
     }
     await logger.progressCall("\r\n ⚙️ Init Project ...", f1, "npm init");
     const f2 = async () => {
+        // const __dirname = path.join(require.main!.filename, "..")
         await fs.copy(path.join(__dirname, "./templates"), projectPath)
         await fs.copyFile(path.join(__dirname, "./templates/.env.example"), path.join(projectPath, ".env"))
         return
@@ -89,3 +89,9 @@ async function template(projectPath: string) {
 
     Logger.success("\r\n 💪 Create Success!");
 }
+
+
+main().catch((error) => {
+    console.error(error);
+    process.exitCode = 1;
+});
