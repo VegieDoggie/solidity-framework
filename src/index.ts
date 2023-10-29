@@ -68,6 +68,7 @@ async function template(projectPath: string) {
         // const __dirname = path.join(require.main!.filename, "..")
         await fs.copy(path.join(__dirname, "./templates"), projectPath)
         await fs.copyFile(path.join(__dirname, "./templates/.env.example"), path.join(projectPath, ".env"))
+        await fs.copyFile(path.join(__dirname, "./templates/_.gitignore"), path.join(projectPath, ".gitignore"))
         return
     }
     await logger.progressCall("\r\n ⚙️ Generate Template ...", f2, "template");
