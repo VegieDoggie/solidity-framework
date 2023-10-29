@@ -79,3 +79,4 @@ certora_*
 
 /typechain-types
 /**/*.js
+!__scripts__
