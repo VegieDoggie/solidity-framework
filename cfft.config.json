@@ -1,0 +1,19 @@
+{
+  "defaultTemplateName": "component",
+  "templates": [
+    {
+      "name": "component",
+      "options": {
+        "templatePath": "/.cfft.templates/component",
+        "dirPath": "./{fileName}",
+        "fileNameTextToBeReplaced": "component",
+        "searchAndReplace": [
+          {
+            "search": "FileName",
+            "replace": "{fileName}"
+          }
+        ]
+      }
+    }
+  ]
+}

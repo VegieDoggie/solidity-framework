@@ -1,0 +1,34 @@
+{
+  "name": "@solidity-cli",
+  "version": "1.0.0",
+  "description": "A General Solidity Development and Testing Framework/CLI.",
+  "main": "index.js",
+  "bin": {
+    "sol": "index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VegieDoggie/solidity-cli.git"
+  },
+  "keywords": [
+    "solidity",
+    "hardhat",
+    "foundry",
+    "blockchain",
+    "ethers",
+    "bootstrap",
+    "solidity-cli",
+    "openzeppelin",
+    "uniswap",
+    "chainlink",
+    "etheruem",
+    "framework",
+    "cli"
+  ],
+  "author": "Tim (aitimate)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/VegieDoggie/solidity-cli/issues"
+  },
+  "homepage": "https://github.com/VegieDoggie/solidity-cli#readme"
+}
