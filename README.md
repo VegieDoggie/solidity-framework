@@ -1,4 +1,4 @@
-# @solidity-cli
+# solidity-framework
 
 en: A General Solidity Development and Testing Framework/CLI.
 zh: 通用的开发和测试`Solidity`的快速脚手架
