@@ -11,8 +11,9 @@
     "url": "git+https://github.com/VegieDoggie/solidity-framework.git"
   },
   "scripts": {
+    "copy-readme": "node __scripts__/README.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node esbuild"
+    "build": "node esbuild && npm run copy-readme"
   },
   "keywords": [
     "solidity",
