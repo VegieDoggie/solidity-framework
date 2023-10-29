@@ -10,7 +10,6 @@ import path from "path";
 import {exec} from "child_process";
 import {promisify} from "util";
 import * as fs from "fs-extra";
-import {fileURLToPath} from 'node:url';
 
 const main = async () => {
     try {
