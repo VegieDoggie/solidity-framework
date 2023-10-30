@@ -31,7 +31,4 @@
     "url": "https://github.com/VegieDoggie/solidity-framework/issues"
   },
   "homepage": "https://github.com/VegieDoggie/solidity-framework#readme",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  }
 }
