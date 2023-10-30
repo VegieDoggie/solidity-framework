@@ -15,7 +15,7 @@ const main = async () => {
     try {
         let args = arg(CLI_ARGS_TYPE, {bare: true} as any)
         if (args[CLI_ARG.VERSION]) {
-            Logger.success(`v${pkg.version}`);
+            Logger.success(`${pkg.version}`);
         } else if (args[CLI_ARG.HELP]) {
             Logger.info(CLI_INFO())
         } else if (args[CLI_ARG.DEFAULT]?.length) {
@@ -84,8 +84,6 @@ async function template(projectPath: string) {
         return await promisify(exec)("git submodule update --remote --init --recursive")
     }
     await logger.progressCall("\r\n ⚙️ Init Git and Submodule...", f4, "git init", "git submodule");
-
-    await new Promise(resolve => setTimeout(resolve, 10000));
 
     Logger.success("\r\n 💪 Create Success!");
 }
