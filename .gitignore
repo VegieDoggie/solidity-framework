@@ -79,5 +79,7 @@ certora_*
 
 /typechain-types
 /**/*.js
+
 !__scripts__
 !esbuild.js
+dist/README.md
