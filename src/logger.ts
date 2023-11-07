@@ -29,7 +29,7 @@ const plainObject = (message: any[]): any[] => {
     return wrapped
 };
 
-const progress = (title: string, ...names: string[]) => {
+const progress = (title: string, ...tasks: string[]) => {
     const barFactory = new cp.MultiBar({
         clearOnComplete: false,
         hideCursor: true,
@@ -41,7 +41,7 @@ const progress = (title: string, ...names: string[]) => {
     }
     let controller = {success: false, restart: false, pause: false};
     let timeout = 0;
-    const bars: SingleBar[] = names.map(name => {
+    const bars: SingleBar[] = tasks.map(name => {
             return barFactory.create(100, 1, {filename: name})
         })
     ;(async () => {
@@ -66,14 +66,14 @@ const progress = (title: string, ...names: string[]) => {
                 await new Promise(resolve => setTimeout(resolve, timeout));
                 continue
             }
-            let index = Math.floor(Math.random() * names.length)
+            let index = Math.floor(Math.random() * tasks.length)
             let progress = Math.floor(Math.random() * Math.max(bars[index].getTotal() - progresses[index], 6) / 5 + progresses[index])
             if (progresses[index] < progress && progress < bars[index].getTotal()) {
                 progresses[index] = progress
                 bars[index].update(progress)
             }
             if (Math.random() < 0.5) {
-                timeout = Math.min(Math.max(i * names.length, 60), 200);
+                timeout = Math.min(Math.max(i * tasks.length, 60), 200);
                 await new Promise(resolve => setTimeout(resolve, timeout));
             }
         }
@@ -97,8 +97,8 @@ const progress = (title: string, ...names: string[]) => {
     };
 };
 
-const progressCall = async (title: string, func: any, ...names: string[]) => {
-    const p1 = progress(title, ...names);
+const progressCall = async (title: string, func: any, ...tasks: string[]) => {
+    const p1 = progress(title, ...tasks);
     let result
     try {
         result = await func()
