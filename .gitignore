@@ -87,6 +87,4 @@ dist/README.md
 
 /dist/template
 /chainlist/
-/template/lib
-/template/contracts/diamond-2
-/template/.git
+/template/

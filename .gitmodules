@@ -1,3 +1,6 @@
 [submodule "chainlist"]
 	path = chainlist
 	url = https://github.com/DefiLlama/chainlist.git
+[submodule "template"]
+	path = template
+	url = https://github.com/VegieDoggie/solidity-framework-template.git
