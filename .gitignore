@@ -78,8 +78,11 @@ certora_*
 /abi-pure
 
 /typechain-types
-/**/*.js
-
+/src/**/*.js
+/dist/**/*.js
 !__scripts__
 !esbuild.js
 dist/README.md
+
+
+/dist/template

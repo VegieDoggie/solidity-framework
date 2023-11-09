@@ -36,7 +36,7 @@ const progress = (title: string, ...tasks: string[]) => {
         format: '| {bar} | {value}/{total} | {filename}',
     }, cp.Presets.rect);
     if (title?.length) {
-        info(title)
+        success(title)
         // barFactory.log(chalk.blue(title))
     }
     let controller = {success: false, restart: false, pause: false};

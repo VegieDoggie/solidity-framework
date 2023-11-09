@@ -8,6 +8,7 @@ export const enum CLI_ARG {
     HELP = "--help",
     DEFAULT = "_",
     INIT = "init",
+    NETWORKS = "networks",
     PATH = "path",
 }
 
@@ -40,7 +41,8 @@ export const CLI_INFO = () => {
     });
 
     let rows = [
-        ["init", "", "init the current directory as project"],
+        [CLI_ARG.INIT, "", "init the current directory as project"],
+        [CLI_ARG.NETWORKS, "", "refresh network config file: hardhat.network.json"],
         [CLI_ARG.NAME, CLIArgAlias.NAME, "File name to be used"],
         [CLI_ARG.VERSION, CLIArgAlias.VERSION, "Show the current version of the package"],
     ];
