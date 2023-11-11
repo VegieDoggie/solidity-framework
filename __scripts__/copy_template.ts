@@ -10,6 +10,7 @@ async function main() {
         fs.copy(from + "foundry.toml", to + "foundry.toml"),
         fs.copy(from + "hardhat.config.ts", to + "hardhat.config.ts"),
         fs.copy(from + "README.md", to + "README.md"),
+        fs.copy(from + "README.en.md", to + "README.en.md"),
         fs.copy(from + "tsconfig.json", to + "tsconfig.json"),
         fs.copy(from + ".gitmodules", to + ".gitmodules"),
     ])

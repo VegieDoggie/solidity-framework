@@ -1,8 +1,7 @@
 {
   "compilerOptions": {
     "allowJs": true,
-    "checkJs": false,
-    "target": "es2022",
+    "target": "ES2022",
     "module": "commonjs",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,

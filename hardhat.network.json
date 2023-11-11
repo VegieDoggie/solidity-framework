@@ -1,0 +1,6 @@
+{
+  "mainnet": {
+    "chainId": 1,
+    "url": "https://mainnet.gateway.tenderly.co"
+  }
+}
