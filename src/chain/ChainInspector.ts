@@ -105,8 +105,8 @@ export class ChainInspector {
         }, [] as VerifyChain[]);
     }
 
-    static HardhatVerifyChainsList = ()=>{
-        return HardhatVerifyChains.map(chain=>chain.network)
+    static HardhatVerifyChainsList = () => {
+        return HardhatVerifyChains.map(chain => chain.network)
     }
 
     // step 3
@@ -193,10 +193,14 @@ export class ChainInspector {
 
     static write = async (output: string, obj: any, isPretty?: boolean) => {
         await createFile(output);
-        if (isPretty) {
-            await promisify(writeFile)(output, JSON.stringify(obj, undefined, 2))
+        if (typeof obj === "string") {
+            await promisify(writeFile)(output, obj)
         } else {
-            await promisify(writeFile)(output, JSON.stringify(obj))
+            if (isPretty) {
+                await promisify(writeFile)(output, JSON.stringify(obj, undefined, 2))
+            } else {
+                await promisify(writeFile)(output, JSON.stringify(obj))
+            }
         }
     }
 
