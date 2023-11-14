@@ -97,7 +97,7 @@ const libDevs = [
     "hardhat-diamond-abi",
     "hardhat-exposed",
     "hardhat-ignore-warnings",
-    "uniswap-v2-deploy-plugin"
+    "uniswap-v2-deployer"
 ]
 
 const libs = [
