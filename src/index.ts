@@ -88,22 +88,21 @@ const main = async () => {
 };
 
 const libDevs = [
-    "@nomicfoundation/hardhat-foundry",
-    "@nomicfoundation/hardhat-toolbox",
-    "@openzeppelin/hardhat-upgrades",
-    "dotenv",
-    "hardhat",
-    "hardhat-abi-exporter",
-    "hardhat-diamond-abi",
-    "hardhat-exposed",
-    "hardhat-ignore-warnings",
-    "uniswap-v2-deployer"
+    "hardhat@2",
+    "@nomicfoundation/hardhat-toolbox@3",
+    "@openzeppelin/hardhat-upgrades@2",
+    "dotenv@16",
+    "hardhat-abi-exporter@2",
+    "hardhat-diamond-abi@3",
+    "hardhat-exposed@0",
+    "hardhat-ignore-warnings@0",
+    "uniswap-v2-deployer@0"
 ]
 
 const libs = [
-    "@openzeppelin/contracts",
-    "@openzeppelin/contracts-upgradeable",
-    "@chainlink/contracts",
+    "@openzeppelin/contracts@5",
+    "@openzeppelin/contracts-upgradeable@5",
+    "@chainlink/contracts@0",
 ]
 
 async function template(projectPath: string) {
