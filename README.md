@@ -11,6 +11,9 @@ zh: 通用的开发和测试脚手架sol，集成了hardhat，foundry和主流�
 usages:
 ```cmd
 npm i -g solidity-framework
+# create a new project
+sol
+# sol init # create current-dir as new project
 ```
 
 commands:
