@@ -41,13 +41,13 @@ export const CLI_INFO = () => {
             head: new Array(3).fill("cyan"),
         },
     });
-
+    const sol = "sol "
     let rows = [
-        [CLI_ARG.INIT, "", "init the current directory as project"],
-        [CLI_ARG.NETWORKS, "", "refresh network config file: hardhat.network.json"],
-        [CLI_ARG.SHOW + " " + CLI_ARG.NETWORKS, "", "show all networks"],
-        [CLI_ARG.NAME, CLIArgAlias.NAME, "File name to be used"],
-        [CLI_ARG.VERSION, CLIArgAlias.VERSION, "Show the current version of the package"],
+        [sol, "", "create project(ask name)"],
+        [sol+CLI_ARG.INIT, "", "init the current directory as project"],
+        [sol+CLI_ARG.NETWORKS, "", "refresh network config file: hardhat.network.json"],
+        [sol+CLI_ARG.SHOW + " " + CLI_ARG.NETWORKS, "", "show all networks"],
+        [sol+CLI_ARG.VERSION, CLIArgAlias.VERSION, "Show the current version of the package"],
     ];
 
     table.push(...rows);
