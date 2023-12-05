@@ -12,7 +12,7 @@ zh: 通用的开发和测试脚手架sol，集成了hardhat，foundry和主流�
 npm i -g solidity-framework
 sol
 ```
-## commonds
+## commands
 - `sol --help`
 
 ![help](https://github.com/VegieDoggie/solidity-framework/blob/main/asserts/sol__help.png)
