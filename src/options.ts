@@ -45,8 +45,8 @@ export const CLI_INFO = () => {
     let rows = [
         [sol, "", "create project(ask name)"],
         [sol+CLI_ARG.INIT, "", "init the current directory as project"],
-        [sol+CLI_ARG.NETWORKS, "", "refresh network config file: hardhat.network.json"],
-        [sol+CLI_ARG.SHOW + " " + CLI_ARG.NETWORKS, "", "show all networks"],
+        // [sol+CLI_ARG.NETWORKS, "", "refresh network config file: hardhat.network.json"],
+        // [sol+CLI_ARG.SHOW + " " + CLI_ARG.NETWORKS, "", "show all networks"],
         [sol+CLI_ARG.VERSION, CLIArgAlias.VERSION, "Show the current version of the package"],
     ];
 
